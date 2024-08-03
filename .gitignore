@@ -1,0 +1,24 @@
+# Swap, backup, and undo files
+*.swp
+*.swo
+*.backup
+*.undo
+
+# Plugin specific files and directories
+tags
+test.sh
+.luarc.json
+nvim
+
+# Spell files
+spell/
+
+# Lazy.nvim lock file
+lazy-lock.json
+
+# Additional entries from quarto-nvim-kickstarter
+/profile.json
+
+# Personal configuration files
+personal.lua
+
