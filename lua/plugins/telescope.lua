@@ -1,6 +1,3 @@
--- For debug
-print("Telescope")
-
 -- [[ Telescope ]]
 return {
   { -- Fuzzy Finder (files, lsp, etc)

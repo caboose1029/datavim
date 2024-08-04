@@ -1,6 +1,3 @@
--- For debug
-print("Init")
-
 -- [[ Global ]]
 -- nvim/lua/config/global.lua
 require 'config.global'

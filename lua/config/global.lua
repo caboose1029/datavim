@@ -1,5 +1,4 @@
--- For debug
-print("Global")
+-- [[ Global ]]
 
 -- Set <space> as leader key
 -- See ':help mapleader'

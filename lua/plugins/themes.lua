@@ -1,6 +1,4 @@
--- For debug
-print("Themes")
-
+-- [[ Themes ]]
 return {
 	{
 	'neanias/everforest-nvim',
