@@ -6,8 +6,9 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Enable break indent
+-- Enable break and smart indent
 vim.opt.breakindent = true
+vim.opt.smartindent = true
 
 -- Enable mouse
 vim.opt.mouse = 'a'
@@ -53,3 +54,20 @@ vim.opt.listchars = {
 	trail = '·',
 	nbsp = '␣'
 }
+
+-- Decrease indentation size
+local tabsize = 2
+vim.opt.expandtab = true
+vim.opt.shiftwidth = tabsize
+vim.opt.tabstop = tabsize
+
+-- Show windowbar
+vim.opt.winbar = '%f'
+
+-- Don't continue comments on <CR>
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    vim.opt.formatoptions:remove { "c", "r", "o" }
+  end,
+  desc = "Disable New Line Comment",
+})

@@ -1,18 +1,15 @@
--- For debug
-print("Treesitter")
-
-return {
-	{ -- Highlight, edit, and navigate code 
+return{
+	{-- Highlight, edit, and navigate code 
 	'nvim-treesitter/nvim-treesitter',
-	build = ':TSUpdate',
-	opts = {
+	build= ':TSUpdate',
+	opts= {
 
-		ensure_installed = { 
-			'bash', 
-			'python', 
-			'lua', 
-			'luadoc', 
-			'markdown', 
+		ensure_installed= {
+			'bash',
+			'python',
+			'lua',
+			'luadoc',
+			'markdown',
 			'markdown_inline',
 			'yaml',
 			'vim',
@@ -20,17 +17,17 @@ return {
 			'html',
 			'css',
 	},
-	auto_install = true,
-	highlight = {
-		enable = true,
-		-- additional_vim_regex_highlighting = { 'ruby' },
+	auto_install= true,
+	highlight= {
+		enable= true,
+		--additional_vim_regex_highlighting = { 'ruby' },
 	},
-	indent = { enable = true },
+	indent= { enable = true },
 	},
 
-	-- [[ Configure Treesitter ]]
-	-- See ':help nvim-treesitter'
-	config = function(_, opts)
+	--[[ Configure Treesitter ]]
+	--See ':help nvim-treesitter'
+	config= function(_, opts)
 		require('nvim-treesitter.configs').setup(opts)
 	end,
 	},
