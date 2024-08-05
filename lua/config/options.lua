@@ -14,7 +14,7 @@ vim.opt.smartindent = true
 vim.opt.mouse = 'a'
 
 -- Set background to dark
-vim.o.background = 'dark'
+-- vim.o.background = 'dark'
 
 -- Don't show the mode
 vim.opt.showmode = false
