@@ -11,10 +11,13 @@ vim.opt.breakindent = true
 vim.opt.smartindent = true
 
 -- Enable mouse
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 -- Set background to dark
--- vim.o.background = 'dark'
+vim.o.background = "dark"
+
+-- Decrease update time
+vim.opt.updatetime = 200
 
 -- Don't show the mode
 vim.opt.showmode = false
@@ -22,13 +25,13 @@ vim.opt.showmode = false
 -- Sync clipboard with OS
 -- See ':help 'clipboard''
 vim.schedule(function()
-	vim.opt.clipboard = 'unnamedplus'
+	vim.opt.clipboard = "unnamedplus"
 end)
 
 -- Save undo history
 vim.opt.undofile = true
 
--- Case insensitive searching 
+-- Case insensitive searching
 -- UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -41,7 +44,7 @@ vim.opt.splitbelow = true
 vim.opt.scrolloff = 20
 
 -- Live substitution preview
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 -- Show cursor line
 vim.opt.cursorline = true
@@ -50,9 +53,9 @@ vim.opt.cursorline = true
 -- See ':help 'list'' and ':help 'listchars''
 vim.opt.list = true
 vim.opt.listchars = {
-	tab = '» ',
-	trail = '·',
-	nbsp = '␣'
+	tab = "» ",
+	trail = "·",
+	nbsp = "␣",
 }
 
 -- Decrease indentation size
@@ -62,12 +65,12 @@ vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
 
 -- Show windowbar
-vim.opt.winbar = '%f'
+vim.opt.winbar = "%f"
 
 -- Don't continue comments on <CR>
 vim.api.nvim_create_autocmd("BufEnter", {
-  callback = function()
-    vim.opt.formatoptions:remove { "c", "r", "o" }
-  end,
-  desc = "Disable New Line Comment",
+	callback = function()
+		vim.opt.formatoptions:remove({ "c", "r", "o" })
+	end,
+	desc = "Disable New Line Comment",
 })
