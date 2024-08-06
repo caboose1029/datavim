@@ -28,6 +28,11 @@ return {
 -- See `:help telescope` and `:help telescope.setup()`
     config = function()
       require('telescope').setup {
+        defaults = {
+          mappings = {
+            i = { ['<CR>'] = 'select_vertical' },
+          },
+        },
        -- pickers = {}
         extensions = {
           ['ui-select'] = {
