@@ -22,3 +22,6 @@ lazy-lock.json
 # Personal configuration files
 personal.lua
 
+# Visual Studio configuration files
+.vs/
+.vscode/
